@@ -1,0 +1,47 @@
+<!-- Add this navigation bar at the top of index.ejs -->
+<nav class="navbar">
+    <div class="logo">🧠 Summarize AI</div>
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/api/about-project">About Project</a></li>
+        <li><a href="/api/about-us">About Us</a></li>
+    </ul>
+</nav>
+
+<!-- Update styles.css to style the navbar -->
+<style>
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #28a745;
+}
+</style>

@@ -1,0 +1,118 @@
+<%- include('navbar') %>
+
+<div class="container">
+    <h1>About Summarize AI</h1>
+    <p>Summarize AI is an innovative tool that automates the process of gathering, summarizing, and visualizing information. With the rise of massive digital content, it is challenging to extract useful insights quickly. Summarize AI simplifies this by using natural language processing (NLP) techniques to generate concise summaries and interactive mind maps.</p>
+
+    <h2>🌍 How Does It Work?</h2>
+    <p>Summarize AI follows a structured workflow to ensure accurate and efficient summarization of any given topic:</p>
+    
+    <h3>1️⃣ Data Collection</h3>
+    <p>When a user searches for a historical figure or topic, Summarize AI retrieves relevant data from various sources. These sources include Wikipedia, research articles, and news sites. The system ensures credibility by filtering out unreliable sources.</p>
+
+    <h3>2️⃣ Text Processing & Summarization</h3>
+    <p>The extracted data is processed using an advanced text summarization technique powered by the Python library <strong>Sumy</strong>. Sumy uses algorithms such as LexRank and LSA (Latent Semantic Analysis) to generate structured and coherent summaries.</p>
+    
+    <h3>3️⃣ Mind Map Generation</h3>
+    <p>After summarization, the system converts the extracted key points into a visual mind map using <strong>Graphviz</strong>. This provides a structured representation of the topic, making it easier to understand relationships between events, achievements, and contributions.</p>
+
+    <h3>4️⃣ Presentation & User Interaction</h3>
+    <p>The final output consists of:</p>
+    <ul>
+        <li>A concise summary of the topic</li>
+        <li>A list of major events and achievements</li>
+        <li>A dynamically generated mind map</li>
+    </ul>
+
+    <h2>🚀 Key Features</h2>
+    <ul>
+        <li>🔍 **Automated Data Scraping** - Extracts information from multiple sources.</li>
+        <li>📄 **NLP-Based Summarization** - Uses AI to generate structured summaries.</li>
+        <li>🗺️ **Interactive Mind Maps** - Converts text into a graphical format for easy understanding.</li>
+        <li>⚡ **Fast & Efficient** - Generates results within seconds.</li>
+        <li>📌 **User-Friendly Interface** - Simple and intuitive UI for seamless interaction.</li>
+    </ul>
+
+    <h2>🛠 Technologies Used</h2>
+    <ul>
+        <li>Node.js (Backend Server)</li>
+        <li>Express.js (Web Framework)</li>
+        <li>Python (NLP & Data Processing)</li>
+        <li>Sumy (Text Summarization Library)</li>
+        <li>Graphviz (Mind Map Generation)</li>
+        <li>EJS (Template Engine)</li>
+        <li>CSS & JavaScript (Frontend Styling & Interactions)</li>
+    </ul>
+
+    <h2>💡 Why Do We Need Summarize AI?</h2>
+    <p>Information overload is a major challenge in today's digital world. Summarize AI helps by:</p>
+    <ul>
+        <li>📚 Reducing time spent reading long articles</li>
+        <li>⚡ Providing quick insights for students, researchers, and professionals</li>
+        <li>📊 Presenting information visually for better retention</li>
+        <li>🎯 Ensuring structured and well-organized data presentation</li>
+    </ul>
+
+    <h2>🌟 Real-World Applications</h2>
+    <ul>
+        <li>📖 **Education** - Helps students and teachers summarize complex topics.</li>
+        <li>📊 **Research & Analysis** - Assists professionals in quickly extracting insights from lengthy documents.</li>
+        <li>📰 **News Aggregation** - Summarizes news articles for faster reading.</li>
+        <li>📈 **Corporate Use** - Helps businesses analyze reports and case studies efficiently.</li>
+    </ul>
+
+    <p>With Summarize AI, you can explore knowledge more efficiently and save time while gaining valuable insights!</p>
+</div>
+
+<!-- Google Font Import -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-top: 20px;
+}
+
+p, ul {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+</style>

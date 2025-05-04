@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Summarize AI</title>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+    <%- include('navbar') %>
+
+    <div class="container">
+        <h1>🧠 Summarize AI</h1>
+
+        <form action="/search" method="get" class="search-form">
+            <input type="text" name="keyword" placeholder="Enter a historical figure or topic"
+                value="<%= keyword || '' %>" required />
+            <button type="submit">Get Summary & Mind Map</button>
+        </form>
+
+        <% if (data && data.summary) { %>
+        <div class="result-card">
+            <h2><%= data.summary.name || "Unknown" %> (<%= data.summary.birth || "N/A" %>)</h2>
+
+            <% if (data.summary.historical_summary) { %>
+            <h3>📝 Summary</h3>
+            <p><%= data.summary.historical_summary %></p>
+            <% } %>
+
+            <% if (data.summary.major_events && data.summary.major_events.length) { %>
+            <h3>📌 Major Events</h3>
+            <ul>
+                <% data.summary.major_events.forEach(event => { %>
+                <li><%= event %></li>
+                <% }) %>
+            </ul>
+            <% } %>
+
+            <% if (data.summary.achievements && data.summary.achievements.length) { %>
+            <h3>🏆 Achievements</h3>
+            <ul>
+                <% data.summary.achievements.forEach(ach => { %>
+                <li><%= ach %></li>
+                <% }) %>
+            </ul>
+            <% } %>
+
+            <h3>🔗 Reference Links</h3>
+            <% if (data.links && data.links.length) { %>
+            <ul>
+                <% data.links.forEach(link => { %>
+                <li><a href="<%= link %>" target="_blank"><%= link %></a></li>
+                <% }) %>
+            </ul>
+            <% } else { %>
+            <p>No reference links available.</p>
+            <% } %>
+
+            <% if (data.mindMapImage) { %>
+            <h3>🗺️ Mind Map</h3>
+            <img id="mindmap-img" src="<%= data.mindMapImage %>" alt="Mind Map" class="mindmap-img" />
+            <% } %>
+
+        </div>
+        <% } %>
+    </div>
+
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+      </div>
+
+    <% if (data && data.mindMapImage) { %>
+    <!-- 🔹 Image Modal -->
+    <div id="image-modal" class="modal">
+        <span class="close" id="close-modal">&times;</span>
+        <div class="modal-container">
+            <img id="modal-img" class="modal-content" />
+        </div>
+    </div>
+    <% } %>
+
+    <script src="/script.js"></script>
+</body>
+</html>
