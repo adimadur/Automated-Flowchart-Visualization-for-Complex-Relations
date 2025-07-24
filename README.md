@@ -72,4 +72,10 @@ See `.example.env` for all required variables:
 **Team:**
 - Aditya Madur, Bhagyesh Gavhale, Priti Jadhav, Madhuri Patil
 
-**License:** ISC 
+**License:**
+
+This project is proprietary and is not licensed for use, modification, or distribution.
+
+It is publicly visible for demonstration purposes only.
+
+Please contact adityamadur735@gmail.com for any questions.
